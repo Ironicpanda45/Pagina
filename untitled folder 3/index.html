@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="utf-8" />
+    <title>Text checkbox</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="estilo.css">
+
+    <script>
+        function cambiaColor(){
+            var i
+            for (i=0;<document.fcolores.color.length;i++){
+                if (document.fcolores.color[i].checked)
+                break;
+            }
+            document,bgcolor = document.fcolores.color[i].value
+        }
+        </script>
+
+</head>
+<body>
+
+    <form action="" class="validar_form" method="post">
+        <h2>Checkbox</h2>
+        <h3>Idiomas que habla</h3>
+        <div><input type="checkbox" name="chck[]" value="opt 1 chckd" /><label>Espa&ntilde;ol</label></div>
+        <div><input type="checkbox" name="chck[]" value="opt 2 chckd" /><label>Ingles</label></div>
+        <div><input type="checkbox" name="chck[]" value="opt 3 chckd" /><label>Franc&&eacute;s</label></div>    
+        <div><input type="checkbox" name="chck[]" value="opt 4 chckd" /><label>Italiano</label></div>    
+        <div><input type="checkbox" name="chck[]" value="opt 5 chckd" /><label>Alem&aacute;n</label></div> 
+        <div class="errors error1"></div>
+        <h2>Radio Button</h2>
+        <h4>Comida</h4>
+        <div><input type="radio" name="gruporad" value="rad 1 chckd" /><label>Bauette</label></div>
+        <div><input type="radio" name="gruporad" value="rad 2 chckd" /><label>Tacos</label></div>
+        <div><input type="radio" name="gruporad" value="rad 3 chckd" /><label>Torta</label></div>    
+
+        <h2>Select</h2>
+        <div>
+                <h3>Qu&eacute; bebida acostumbra</h3>
+                <select name="select">
+                   <option value="bebida">Agua</option>
+                   <option value="bebida">Caf&eacute;</option>
+                   <option value="bebida">Te</option>
+                   <option value="bebida">Chocolate</option>
+                   <option value="bebida">Malteada</option>
+                   <option value="bebida">Soda</option>
+                   <option value="bebida">Licuado</option>
+
+                </select>
+        </div><br>
+
+        <button class="enviar">Enviar</button>
+    </form>
+<form method="post" action="guardardatos.php">
+    <p><b>Preferencias</b><br>
+        <input type="checkbox" name="passtime[]" value="Navegar">Navegar<br/>
+        <input type="checkbox" name="passtime[]" value="Patinar">Patinar<br/>
+        <input type="checkbox" name="passtime[]" value="Esquiar">Esquiar<br/>
+        <input type="checkbox" name="passtime[]" value="Atletismo">Atletismo<br/>
+        <input type="checkbox" name="passtime[]" value="Natacion">Natacion<br/>
+
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    <form method="post">
+            <fieldset>
+                <legend>que tipo de mascota te gusta?</legend><br>
+                <input type="chechbox" name="animal" value="gatos"/>Gatos<br/>
+                <input type="chechbox" name="animal" value="Perros"/>Perros<br/>
+                <input type="chechbox" name="animal" value="pajaros"/>Pajaros<br/>
+
+                <input type="submit" value="Enviar">
+                </fieldset>
+    </form>
+    
+    </body>
+</html>
